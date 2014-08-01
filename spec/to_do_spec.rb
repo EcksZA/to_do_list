@@ -7,7 +7,7 @@ describe Task do
     Task.clear
   end
 
-  it "initializes an object that is an instance of the class" do
+  it "initializes an object that is an instance of the Task class" do
     test_task = Task.new("Learn the ruby object model")
     test_task.should be_an_instance_of Task
   end
@@ -43,3 +43,26 @@ describe Task do
     end
   end
 end
+
+describe List do
+  it "initializes the object that is an instance of the list class" do
+    test_list = List.new("School Stuff")
+    test_list.should be_an_instance_of List
+  end
+  it "defines the name of the instance" do
+    test_list = List.new("School Stuff")
+    test_list.name.should eq "School Stuff"
+  end
+
+  describe ".all" do
+    it "initializes an empty list array" do
+      List.all.should eq []
+    end
+    it "adds the list to the list array" do
+      test_list = List.new("School Stuff")
+      test_list.save
+      List.all.should eq [test_list]
+    end
+  end
+end
+
