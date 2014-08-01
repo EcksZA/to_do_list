@@ -34,4 +34,12 @@ describe Task do
       Task.all.should eq []
     end
   end
+
+  describe ".remove_task" do
+    it "removes selected task from list of tasks" do
+      Task.new("Learn the ruby object model").save
+      Task.remove_task("Learn the ruby object model")
+      Task.all.should eq []
+    end
+  end
 end
