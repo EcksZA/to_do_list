@@ -3,6 +3,7 @@ class List
 
   def initialize(name)
     @name = name
+    @tasks = []
   end
 
   def name
@@ -15,5 +16,13 @@ class List
 
   def save
     @@all_lists << self
+  end
+
+  def tasks
+    @tasks
+  end
+
+  def add_task(name)
+    @tasks << name
   end
 end

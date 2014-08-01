@@ -21,11 +21,21 @@ class Task
     @@all_tasks << self
   end
 
-  def initialize(name)
+  def initialize(name, date, priority)
     @name = name
+    @date = date
+    @priority = priority
   end
 
   def name
     @name
+  end
+
+  def date
+    @date
+  end
+
+  def priority
+    @priority
   end
 end
