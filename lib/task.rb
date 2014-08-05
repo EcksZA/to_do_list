@@ -22,9 +22,8 @@ class Task
   end
 
   def initialize(name, date, priority)
-    @name = name
+    @name, @priority = name, priority
     @date = date
-    @priority = priority
   end
 
   def name
