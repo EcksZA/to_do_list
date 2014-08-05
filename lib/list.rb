@@ -1,5 +1,6 @@
 class List
   @@all_lists = []
+  @@all_done = []
 
   def initialize(name)
     @name = name
@@ -40,4 +41,8 @@ class List
       [month.to_i, day.to_i, year.to_i]
     end
   end
+
+  # def done
+  #   @@all_done
+  # end
 end

@@ -121,5 +121,23 @@ describe List do
       test_list.sort_by_date.should eq [test_task_2, test_task_3, test_task_1]
     end
   end
+
+  # describe ".done"
+  #   it "creates a empty array" do
+  #     List.done.should eq []
+  #   end
+
+  #   it "creates an array of taks that are marked by the user as done"
+  #     test_list = List.new("School Stuff")
+  #     test_task_1 = Task.new("Learn the ruby object model", "10/1/14", 5)
+  #     test_list.add_task(test_task_1)
+  #     test_task_2 = Task.new("Learn databases", "8/1/14", 1)
+  #     test_list.add_task(test_task_2)
+  #     test_task_3 = Task.new("Learn the angular.js framework", "9/1/14", 3)
+  #     test_list.add_task(test_task_3)
+  #     test_list.marked_done.should eq [test_task_2]
+  #     test_list.tasks.should eq [test_task_1, test_task_3]
+  #   end
+  # end
 end
 
